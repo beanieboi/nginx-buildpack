@@ -43,13 +43,24 @@ at=info method=GET path=/ host=salty-earth-7125.herokuapp.com request_id=e2c79e8
 
 ### Language/App Server Agnostic
 
-Nginx-buildpack provides a command named `bin/start-nginx` this command takes another command as an argument. You must pass your app server's startup command to `start-nginx`.
+nginx-buildpack provides a command named `bin/start-nginx` this command takes another command as an argument. You must pass your app server's startup command to `start-nginx`.
 
 For example, to get NGINX and Unicorn up and running:
 
 ```bash
 $ cat Procfile
 web: bin/start-nginx bundle exec unicorn -c config/unicorn.rb
+```
+
+### nginx Solo Mode
+
+nginx-buildpack provides a command named `bin/start-nginx-solo`. It does not take any arguments, it only starts nginx if you don't run a app server on the same Dyno.
+
+For example, to get NGINX and Unicorn up and running:
+
+```bash
+$ cat Procfile
+web: bin/start-nginx-solo
 ```
 
 ### Setting the Worker Processes
