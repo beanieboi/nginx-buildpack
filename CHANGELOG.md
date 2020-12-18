@@ -50,20 +50,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.4] - 2012-05-13
 ### Added
-- enabled gzip compression
+- [all] enabled gzip compression
 
 ### Changed
-- include most recent nginx config
-- using epoll and increasing workers to 4
+- [all] include most recent nginx config
+- [all] using epoll and increasing workers to 4
 
 ## [0.3] - 2012-05-11
 ### Changed
-- Improve process managment using a fifo.
+- [all] Improve process managment using a fifo.
 
 ## [0.2] - 2012-05-10
 ### Changed
-- Improve the handling of app server failures
+- [all] Improve the handling of app server failures
 
 ## [0.1] - 2012-05-09
 ### Added
-- initial release with NGINX 1.4.1
+- [all] initial release with NGINX 1.4.1
